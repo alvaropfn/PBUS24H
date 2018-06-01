@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
+
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/bulma.min.css">
   <title>PBUS 24H</title>
 </head>
 
 <!-- AIzaSyD7FL2fOTVPvf9sBCC8wMEKHqj5RBlQ-Wo -->
+
 <body>
   <nav></nav>
 
@@ -19,24 +21,24 @@
       <p class="title">seja bem vindo</p>
       <p class="subtitle">preencha seus dados para proseguir</p>
     </div>
-    
+
     <form action="">
       <label for="inputNome">Nome</label>
       <input class="input is-rounded" type="text" name="inputNome" id="">
-  
+
       <label for="inputEmail">Email</label>
       <input class="input is-rounded" type="text" name="inputEmail" id="">
-  
+
       <label for="inputCPF">CPF</label>
       <input class="input is-rounded" type="text" name="inputCPF" id="">
-      
-      <div id="formButtons">
-          <input class="button is-primary" type="button" value="enviar" onclick="hide('loginScreen'); ">
-          <!-- toggleFullScreen() -->
 
-          <input class="button is-danger" type="button" value="limpar" onclick="">
+      <div id="formButtons">
+        <input class="button is-primary" type="button" value="enviar" onclick="hide('loginScreen'); unhide('mapScreen'); ">
+        <!-- toggleFullScreen() -->
+
+        <input class="button is-danger" type="button" value="limpar" onclick="">
       </div>
-      
+
     </form>
   </section>
 
@@ -50,14 +52,14 @@
       </button>
     </div>
   </section>
-  
-  <script async defer
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7FL2fOTVPvf9sBCC8wMEKHqj5RBlQ-Wo&callback=initMap"></script>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7FL2fOTVPvf9sBCC8wMEKHqj5RBlQ-Wo&callback=initMap"></script>
   <script src="javascripts/maps.action.js"></script>
 
   <script src="javascripts/anime.min.js"></script>
-  
+
   <!-- my stufss -->
   <script src="javascripts/script.js"></script>
 </body>
+
 </html>

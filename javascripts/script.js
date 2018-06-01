@@ -24,6 +24,11 @@ function hide(eID){
   console.log(eID)
 }
 
+function unhide(eID){
+  let element = document.getElementById(eID);
+  element.classList.remove("hide")
+  console.log(eID)
+}
 
 let map = document.getElementById("map");
 let alertBar = document.getElementById('alertBar')
@@ -59,8 +64,3 @@ function change(){
   }
   alertBar.isLarge = !alertBar.isLarge;
 }
-// var cssSelector = anime({
-//   targets: '#alerBar',
-//   translateY: -250
-// });
-
