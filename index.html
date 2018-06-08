@@ -14,7 +14,6 @@
 <!-- AIzaSyD7FL2fOTVPvf9sBCC8wMEKHqj5RBlQ-Wo -->
 
 <body>
-  <nav></nav>
 
   <section id="loginScreen" class="container">
     <div class="hero is-info">
@@ -43,6 +42,34 @@
   </section>
 
   <section id="mapScreen" class="hide">
+    <nav>
+      <button>
+        <img src="/images/menu.svg" onclick="changeMenu()" alt="" srcset="">
+      </button>
+      <div id="menuWrapper">
+        <a href="#">
+          <div class="flex-colunn">
+            <img src="images/person.svg" alt="contatos" srcset="">
+          </div>
+          <p>Pessoas a notificar</p>
+        </a>
+
+        <a href="#">
+          <div class="flex-colunn">
+            <img src="images/phone.svg" alt="fones" srcset="">
+          </div>
+          <p>serviços de emergência</p>
+        </a>
+
+        <a href="#">
+          <div class="flex-colunn">
+            <img src="images/place.svg" alt="fones" srcset="">
+          </div>
+          <p>locais de úteis</p>
+        </a>
+
+      </div>
+    </nav>
     <div id="map"></div>
     <div id="alertBar" class="is-danger " on-drag-up="upAlertBar()">
       <button id='help' class="button hide" onclick="helpAction()">socorro</button>

@@ -31,33 +31,58 @@ function unhide(eID){
 }
 
 let map = document.getElementById("map");
+
 let alertBar = document.getElementById('alertBar')
 alertBar.isLarge = false;
+
 let help = document.getElementById('help')
+
 let alert = document.getElementById('alert')
 
+let menuWrapper =  document.getElementById('menuWrapper')
+menuWrapper.isVisible = false;
+
 function upAlertBar(){
-  change()
+  changeAlertBar()
 }
 
 function helpAction(){
-  change()
+  changeAlertBar()
   window.alert("sua localização foi enviada para a policia")
 }
 
-function change(){
+function changeMenu(){
+  if(menuWrapper.isVisible){
+    console.log('desaparecer')
+    var domNode = anime({
+      targets: menuWrapper,
+      translateX: "-50vw",
+      easing: 'easeInOutQuad'
+    });
+  }else{
+    console.log('aparecer')
+    var domNode = anime({
+      targets: menuWrapper,
+      translateX: "50vw",
+      easing: 'easeInOutQuad'
+    });
+  }
+  menuWrapper.isVisible = !menuWrapper.isVisible;
+}
+
+function changeAlertBar(){
   if(alertBar.isLarge){
     console.log("esticar")
-    map.style.height="90%";
-    alertBar.style.height="10%";
+    map.style.height="87vh";
+    alertBar.style.height="8vh";
     
     alert.classList.remove('hide')
     help.classList.add('hide')
   }
   else{
     console.log('encolher')
-    map.style.height="40%";
-    alertBar.style.height="60%";
+    map.style.height="45vh";
+    alertBar.style.height="55vh";
 
     alert.classList.add('hide')
     help.classList.remove('hide')
