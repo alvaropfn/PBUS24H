@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/bulma.min.css">
+  <title>PBUS 24H</title>
+</head>
+
+<body>
+  <nav>
+
+  </nav>
+
+  <div class="police-wrapper">
+    <div class="alert-list">
+      <ul>
+        <li id='L1' class="flex-row">
+          <div onclick="initMap(-5.8078963,-35.2313306, 18, true, `<h6>Ponta do Pirambu</h6>
+            <ul>
+                <li>Endereço: Rua Sem Pescoço, 250</li>
+                <li>Telefones: (84) 3246-4333/ (84) 99924- 2146</li>
+                <li>Email: pontadopirambu@pontadopirambu.com.br</li>
+                <li>Horário: 09:00 às 17:00 horas diariamente</li>
+                <li>Formas de Pagamento: Espécie e cartões (master, diners, visa e hipercard)</li>
+            </ul>
+            `)">
+            <img src="images/warning.svg" alt="" srcset=""> alert 1
+          </div>
+          <button onclick="hide('L1')">X</button>
+        </li>
+        <li id='L2' class="flex-row">
+          <div onclick="initMap(-5.841992,-35.2204177, 18, true)">
+            <img src="images/warning.svg" alt="" srcset=""> alert 2
+          </div>
+          <button onclick="hide('L2')">X</button>
+        </li>
+        <li id='L3' class="flex-row">
+          <div onclick="initMap(-5.7592783,-35.256392, 18, true)">
+            <img src="images/warning.svg" alt="" srcset=""> alert 3
+          </div>
+          <button onclick="hide('L3')">X</button>
+        </li>
+      </ul>
+    </div>
+    <div id="map" class="police-map"></div>
+  </div>
+
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7FL2fOTVPvf9sBCC8wMEKHqj5RBlQ-Wo&callback=initMap"></script>
+  <script src="javascripts/maps.action.js"></script>
+
+  <script src="javascripts/anime.min.js"></script>
+  <script>
+    initMap(-5.7997439,-35.2922842, 12, true)
+    function hide(eID) {
+      let element = document.getElementById(eID);
+      element.classList.add("hide")
+      console.log(eID)
+    }
+  </script>
+</body>
+
+</html>

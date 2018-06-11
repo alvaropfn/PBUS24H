@@ -89,3 +89,14 @@ function changeAlertBar(){
   }
   alertBar.isLarge = !alertBar.isLarge;
 }
+
+function changeAlertList(lat = -5.767392, lan = -35.257419){
+  var mapdiv = document.getElementById('map');
+  var map = new google.maps.Map(mapdiv, {
+    center: {
+      lat: lat,
+      lng: lan
+    },
+    zoom: 18
+  });
+}
