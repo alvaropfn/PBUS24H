@@ -133,3 +133,21 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
     'Error: The Geolocation service failed.' :
     'Error: Your browser doesn\'t support geolocation.');
 }
+
+
+for(let i = 0; i < marks.length; i++){
+  var marker = new google.maps.Marker({
+    position: marks[i].position,
+    map: map
+  })
+  attachMessage(marker, marks[i].title)
+}
+
+function attachMessage(marker, msg){
+  var infowindow = new google.maps.InfoWindow({
+    content: msg
+  })
+  marker.addListener('click', function() {
+    infowindow.open(marker.get('map'), marker);
+  })
+}
